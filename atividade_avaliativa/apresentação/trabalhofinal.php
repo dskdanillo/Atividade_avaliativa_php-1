@@ -335,7 +335,7 @@ $code = <<<EOT
     'idade' => 31,
     'email' => null
 ];
-\$fruta = "banana";
+\$fruta = "pitaia";
 
 echo "<pre>"; // Usar <pre> formata a saída do var_dump
 var_dump(\$fruta);
@@ -347,7 +347,7 @@ echo '<textarea readonly rows="12">' . htmlspecialchars($code) . '</textarea>';
 
 echo '<h4>Resultado:</h4>';
 echo '<div class="result"><pre>';
-$fruta_debug = "banana";
+$fruta_debug = "pitaia";
 var_dump($fruta_debug);
 var_dump($dados_debug);
 echo '</pre></div>';
@@ -364,9 +364,9 @@ echo '<p>É o tipo mais comum de array. As chaves são números inteiros, e se n
 
 $code = <<<EOT
 \$arrayNum = [
-    'banana', // Chave 0
-    'goiaba', // Chave 1
-    'morango' // Chave 2
+    'pitaia', // Chave 0
+    'carambola', // Chave 1
+    'melão' // Chave 2
 ];
 
 echo "<pre>";
@@ -379,9 +379,9 @@ echo '<textarea readonly rows="9">' . htmlspecialchars($code) . '</textarea>';
 echo '<h3>Resultado:</h3>';
 echo '<div class="result"><pre>';
 $arrayNum = [
-    'banana',
-    'goiaba',
-    'morango'
+    'pitaia',
+    'carambola',
+    'melão'
 ];
 print_r($arrayNum);
 echo '</pre></div>';
@@ -426,16 +426,16 @@ echo '<p>Temos duas formas principais:</p>
 
 $code = <<<EOT
 \$array = [
-    'banana', // 0
-    'goiaba', // 1
-    'morango' // 2
+    'pitaia', // 0
+    'carambola', // 1
+    'melão' // 2
 ];
 
 // Adiciona 'pera' no próximo índice disponível (3)
 \$array[] = 'pera'; 
 
-// Adiciona 'abacaxi' especificamente no índice 5
-\$array[5] = 'abacaxi';
+// Adiciona 'maracujá' especificamente no índice 5
+\$array[5] = 'maracujá';
 
 echo "<pre>";
 print_r(\$array);
@@ -447,12 +447,12 @@ echo '<textarea readonly rows="16">' . htmlspecialchars($code) . '</textarea>';
 echo '<h3>Resultado:</h3>';
 echo '<div class="result"><pre>';
 $array = [
-    'banana',
-    'goiaba',
-    'morango'
+    'pitaia',
+    'carambola',
+    'melão'
 ];
 $array[] = 'pera';
-$array[5] = 'abacaxi';
+$array[5] = 'maracujá';
 print_r($array);
 echo '</pre></div>';
 
@@ -624,9 +624,9 @@ echo '<h2 id="funcoes-arrays">Funções de Manipulação de Arrays</h2>';
 
 // --- ARRAYS DE EXEMPLO (Definição principal) ---
 $frutas = [
-    'banana',
-    'goiaba',
-    'morango'
+    'pitaia',
+    'carambola',
+    'melão'
 ];
 
 $dados = [
@@ -642,9 +642,9 @@ echo '<p>Conta o número de elementos em um array.</p>';
 $code = <<<EOT
 // Arrays de exemplo
 \$frutas = [
-    'banana',
-    'goiaba',
-    'morango'
+    'pitaia',
+    'carambola',
+    'melão'
 ];
 
 \$dados = [
@@ -675,9 +675,9 @@ echo '<p>Retorna todas as chaves (índices) de um array.</p>';
 $code = <<<EOT
 // Arrays de exemplo
 \$frutas = [
-    'banana',
-    'goiaba',
-    'morango'
+    'pitaia',
+    'carambola',
+    'melão'
 ];
 
 \$dados = [
@@ -710,9 +710,9 @@ echo '<p>Retorna todos os valores de um array, resetando as chaves para índices
 $code = <<<EOT
 // Arrays de exemplo
 \$frutas = [
-    'banana',
-    'goiaba',
-    'morango'
+    'pitaia',
+    'carambola',
+    'melão'
 ];
 
 \$dados = [
@@ -745,9 +745,9 @@ echo '<p>Verifica se um <strong>valor</strong> existe em um array. Retorna `true
 $code = <<<EOT
 // Arrays de exemplo
 \$frutas = [
-    'banana',
-    'goiaba',
-    'morango'
+    'pitaia',
+    'carambola',
+    'melão'
 ];
 
 \$dados = [
@@ -756,23 +756,23 @@ $code = <<<EOT
     'email' => null
 ];
 
-// Verifica se o *valor* 'banana' existe em \$frutas
-echo "Valor 'banana' existe em \$frutas? ";
-var_dump(in_array('banana', \$frutas));
+// Verifica se o *valor* 'pitaia' existe em \$frutas
+echo "Valor 'pitaia' existe em \$frutas? ";
+var_dump(in_array('pitaia', \$frutas));
 
-// Verifica se o *valor* 'banana' existe em \$dados
-echo "Valor 'banana' existe em \$dados? ";
-var_dump(in_array('banana', \$dados));
+// Verifica se o *valor* 'pitaia' existe em \$dados
+echo "Valor 'pitaia' existe em \$dados? ";
+var_dump(in_array('pitaia', \$dados));
 EOT;
 echo '<label>Código:</label>';
 echo '<textarea readonly rows="20">' . htmlspecialchars($code) . '</textarea>';
 
 echo '<h4>Resultado:</h4>';
 echo '<div class="result"><pre>';
-echo "Valor 'banana' existe em \$frutas? ";
-var_dump(in_array('banana', $frutas));
-echo "\nValor 'banana' existe em \$dados? ";
-var_dump(in_array('banana', $dados)); echo ' // Retorna false, pois "banana" não é um *valor* em $dados.';
+echo "Valor 'pitaia' existe em \$frutas? ";
+var_dump(in_array('pitaia', $frutas));
+echo "\nValor 'pitaia' existe em \$dados? ";
+var_dump(in_array('pitaia', $dados)); echo ' // Retorna false, pois "pitaia" não é um *valor* em $dados.';
 echo '</pre></div>';
 echo '<br>';
 
@@ -783,9 +783,9 @@ echo '<p>Procura por um <strong>valor</strong> em um array e retorna a <strong>c
 $code = <<<EOT
 // Arrays de exemplo
 \$frutas = [
-    'banana',
-    'goiaba',
-    'morango'
+    'pitaia',
+    'carambola',
+    'melão'
 ];
 
 \$dados = [
@@ -794,9 +794,9 @@ $code = <<<EOT
     'email' => null
 ];
 
-// Procura 'goiaba' em \$frutas e retorna a chave
-echo "Chave do valor 'goiaba' em \$frutas: ";
-var_dump(array_search('goiaba', \$frutas));
+// Procura 'carambola' em \$frutas e retorna a chave
+echo "Chave do valor 'carambola' em \$frutas: ";
+var_dump(array_search('carambola', \$frutas));
 
 // Procura 32 em \$dados (não existe)
 echo "Chave do valor 32 em \$dados: ";
@@ -807,8 +807,8 @@ echo '<textarea readonly rows="20">' . htmlspecialchars($code) . '</textarea>';
 
 echo '<h4>Resultado:</h4>';
 echo '<div class="result"><pre>';
-echo "Chave do valor 'goiaba' em \$frutas: ";
-var_dump(array_search('goiaba', $frutas)); echo ' // Retorna int(1), a chave do valor.';
+echo "Chave do valor 'carambola' em \$frutas: ";
+var_dump(array_search('carambola', $frutas)); echo ' // Retorna int(1), a chave do valor.';
 echo "\nChave do valor 32 em \$dados: ";
 var_dump(array_search(32, $dados)); echo ' // Retorna false, o valor não existe.';
 echo '</pre></div>';
@@ -893,9 +893,9 @@ echo '<p>Retornam a primeira e a última chave de um array, respectivamente. (PH
 $code = <<<EOT
 // Arrays de exemplo
 \$frutas = [
-    'banana',
-    'goiaba',
-    'morango'
+    'pitaia',
+    'carambola',
+    'melão'
 ];
 
 \$dados = [
@@ -934,9 +934,9 @@ echo '<p>Inverte as chaves de um array com seus valores.</p>';
 $code = <<<EOT
 // Array de exemplo
 \$frutas = [
-    'banana',
-    'goiaba',
-    'morango'
+    'pitaia',
+    'carambola',
+    'melão'
 ];
 
 // Note que os valores devem ser tipos válidos para chaves (string ou int)
@@ -958,9 +958,9 @@ echo '<p>Junta os elementos de um array em uma única string, usando um "separad
 $code = <<<EOT
 // Array de exemplo
 \$frutas = [
-    'banana',
-    'goiaba',
-    'morango'
+    'pitaia',
+    'carambola',
+    'melão'
 ];
 
 // Junta o array \$frutas com ", "
@@ -981,7 +981,7 @@ echo '<p>Divide uma string em um array, usando um "delimitador". É o oposto de 
 
 // Define a string que será usada NO TEXTAREA
 $code = <<<EOT
-\$testeString = "maçã,banana,laranja";
+\$testeString = "maçã,pitaia,laranja";
 // Separa a string em um array usando a vírgula ',' como delimitador
 print_r(explode(',', \$testeString));
 EOT;
@@ -992,7 +992,7 @@ echo '<h4>Resultado:</h4>';
 echo '<div class="result"><pre>';
 // *** GARANTA QUE ESTA LINHA ESTEJA AQUI ***
 // Define a string que será usada PELA FUNÇÃO EXPLODE ABAIXO
-$testeString = "maçã,banana,laranja"; 
+$testeString = "maçã,pitaia,laranja"; 
 // *****************************************
 
 // Agora $testeString existe e pode ser usada pela função explode
@@ -1009,12 +1009,12 @@ echo '<h3 id="func-array_push">Função array_push</h3>';
 echo '<p>Adiciona um ou mais elementos ao <strong>final</strong> de um array. Esta função altera o array original.</p>';
 
 $code = <<<EOT
-\$frutas_push = ['banana', 'goiaba', 'morango'];
+\$frutas_push = ['pitaia', 'carambola', 'melão'];
 echo "Array antes:\n";
 print_r(\$frutas_push);
 
-// Adiciona 'abacaxi' e 'uva' ao final
-array_push(\$frutas_push, 'abacaxi', 'uva');
+// Adiciona 'maracujá' e 'uva' ao final
+array_push(\$frutas_push, 'maracujá', 'uva');
 
 echo "\nArray depois:\n";
 print_r(\$frutas_push);
@@ -1024,12 +1024,12 @@ echo '<textarea readonly rows="10">' . htmlspecialchars($code) . '</textarea>';
 
 echo '<h4>Resultado:</h4>';
 echo '<div class="result"><pre>';
-$frutas_push = ['banana', 'goiaba', 'morango'];
+$frutas_push = ['pitaia', 'carambola', 'melão'];
 echo "Array antes:\n";
 print_r($frutas_push);
 
-// Adiciona 'abacaxi' e 'uva' ao final
-array_push($frutas_push, 'abacaxi', 'uva');
+// Adiciona 'maracujá' e 'uva' ao final
+array_push($frutas_push, 'maracujá', 'uva');
 
 echo "\nArray depois:\n";
 print_r($frutas_push);
@@ -1146,7 +1146,7 @@ echo '<h3 id="func-sort">Função sort</h3>';
 echo '<p>Ordena os valores de um array em ordem crescente (A-Z, 0-9). As chaves são perdidas/resetadas.</p>';
 
 $code = <<<EOT
-\$frutas_sort = ['banana', 'goiaba', 'morango', 'abacaxi'];
+\$frutas_sort = ['pitaia', 'carambola', 'melão', 'maracujá'];
 echo "Antes:\n";
 print_r(\$frutas_sort);
 
@@ -1160,7 +1160,7 @@ echo '<textarea readonly rows="9">' . htmlspecialchars($code) . '</textarea>';
 
 echo '<h4>Resultado:</h4>';
 echo '<div class="result"><pre>';
-$frutas_sort = ['banana', 'goiaba', 'morango', 'abacaxi'];
+$frutas_sort = ['pitaia', 'carambola', 'melão', 'maracujá'];
 echo "Antes:\n";
 print_r($frutas_sort);
 sort($frutas_sort);
@@ -1175,10 +1175,10 @@ echo '<p>Ordena os valores de um array em ordem crescente (A-Z, 0-9), <strong>ma
 
 $code = <<<EOT
 \$frutas_asort = [
-    0 => 'banana', 
-    1 => 'goiaba', 
-    2 => 'morango', 
-    3 => 'abacaxi'
+    0 => 'pitaia', 
+    1 => 'carambola', 
+    2 => 'melão', 
+    3 => 'maracujá'
 ];
 echo "Antes:\n";
 print_r(\$frutas_asort);
@@ -1193,7 +1193,7 @@ echo '<textarea readonly rows="14">' . htmlspecialchars($code) . '</textarea>';
 
 echo '<h4>Resultado:</h4>';
 echo '<div class="result"><pre>';
-$frutas_asort = ['banana', 'goiaba', 'morango', 'abacaxi'];
+$frutas_asort = ['pitaia', 'carambola', 'melão', 'maracujá'];
 echo "Antes:\n";
 print_r($frutas_asort);
 asort($frutas_asort);
@@ -1207,7 +1207,7 @@ echo '<h3 id="func-rsort">Função rsort</h3>';
 echo '<p>Ordena os valores de um array em ordem decrescente (Z-A, 9-0). As chaves são perdidas/resetadas.</p>';
 
 $code = <<<EOT
-\$frutas_rsort = ['banana', 'goiaba', 'morango', 'abacaxi'];
+\$frutas_rsort = ['pitaia', 'carambola', 'melão', 'maracujá'];
 echo "Antes:\n";
 print_r(\$frutas_rsort);
 
@@ -1221,7 +1221,7 @@ echo '<textarea readonly rows="9">' . htmlspecialchars($code) . '</textarea>';
 
 echo '<h4>Resultado:</h4>';
 echo '<div class="result"><pre>';
-$frutas_rsort = ['banana', 'goiaba', 'morango', 'abacaxi'];
+$frutas_rsort = ['pitaia', 'carambola', 'melão', 'maracujá'];
 echo "Antes:\n";
 print_r($frutas_rsort);
 rsort($frutas_rsort);
@@ -1235,7 +1235,7 @@ echo '<h3 id="func-arsort">Função arsort</h3>';
 echo '<p>Ordena os valores de um array em ordem decrescente (Z-A, 9-0), <strong>mantendo a associação chave-valor</strong>.</p>';
 
 $code = <<<EOT
-\$frutas_arsort = ['banana', 'goiaba', 'morango', 'abacaxi'];
+\$frutas_arsort = ['pitaia', 'carambola', 'melão', 'maracujá'];
 echo "Antes:\n";
 print_r(\$frutas_arsort);
 
@@ -1249,7 +1249,7 @@ echo '<textarea readonly rows="9">' . htmlspecialchars($code) . '</textarea>';
 
 echo '<h4>Resultado:</h4>';
 echo '<div class="result"><pre>';
-$frutas_arsort = ['banana', 'goiaba', 'morango', 'abacaxi'];
+$frutas_arsort = ['pitaia', 'carambola', 'melão', 'maracujá'];
 echo "Antes:\n";
 print_r($frutas_arsort);
 arsort($frutas_arsort);
@@ -1344,7 +1344,7 @@ echo '</ul>';
 
 $code = <<<EOT
 // Arrays de exemplo
-\$frutas_foreach = ['banana', 'goiaba', 'morango'];
+\$frutas_foreach = ['pitaia', 'carambola', 'melão'];
 \$dados_foreach = [
     'nome' => 'Mauricio Rosa',
     'idade' => 31
@@ -1370,7 +1370,7 @@ echo '<textarea readonly rows="20">' . htmlspecialchars($code) . '</textarea>';
 echo '<h3>Resultado:</h3>';
 echo '<div class="result" style="padding: 15px;">';
 // Arrays de exemplo
-$frutas_foreach = ['banana', 'goiaba', 'morango'];
+$frutas_foreach = ['pitaia', 'carambola', 'melão'];
 $dados_foreach = [
     'nome' => 'Mauricio Rosa',
     'idade' => 31
@@ -1402,7 +1402,7 @@ echo '<p>Este programa demonstra a <strong>criação</strong> de uma lista de fr
 
 $code = <<<EOT
 // 1. Criação do Array
-\$frutas_prog1 = ['Maçã', 'Banana', 'Uva'];
+\$frutas_prog1 = ['Maçã', 'pitaia', 'Uva'];
 
 echo "<h3>Lista Inicial:</h3>";
 echo "<pre>";
@@ -1410,7 +1410,7 @@ print_r(\$frutas_prog1);
 echo "</pre>";
 
 // 2. Manipulação (Adicionando itens)
-array_push(\$frutas_prog1, 'Laranja', 'Morango');
+array_push(\$frutas_prog1, 'Laranja', 'melão');
 
 // 3. Exibição
 echo "<h3>Minha Cesta de Frutas Atualizada:</h3>";
@@ -1429,7 +1429,7 @@ echo '<textarea readonly rows="19">' . htmlspecialchars($code) . '</textarea>';
 echo '<h3>Resultado:</h3>';
 echo '<div class="result" style="padding: 15px;">';
 // 1. Criação do Array
-$frutas_prog1 = ['Maçã', 'Banana', 'Uva'];
+$frutas_prog1 = ['Maçã', 'pitaia', 'Uva'];
 
 echo "<h3>Lista Inicial:</h3>";
 echo "<pre>";
@@ -1437,7 +1437,7 @@ print_r($frutas_prog1);
 echo "</pre>";
 
 // 2. Manipulação (Adicionando itens)
-array_push($frutas_prog1, 'Laranja', 'Morango');
+array_push($frutas_prog1, 'Laranja', 'melão');
 
 // 3. Exibição
 echo "<h3>Minha Cesta de Frutas Atualizada:</h3>";
