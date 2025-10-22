@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inserindo dados em um vetor</title>
     <style>
-        /* ======== ESTILO VISUAL ======== */
+
         * {
             margin: 0;
             padding: 0;
@@ -77,14 +77,40 @@
         <h2>Inserindo dados em um vetor</h2>
 
         <?php
-        // ======== INÍCIO DO PHP ========
 
         // Inicia a sessão para armazenar o vetor na memória do servidor
         session_start();
 
-        /* =====================================================
-           FUNÇÕES PRINCIPAIS
-        ===================================================== */
+
+
+        //LÓGICA PRINCIPAL DO PROGRAMA
+
+        // Verifica qual botão foi clicado no formulário HTML
+
+        // 1️. Botão "Gerar" (adicionar valor)
+        if (isset($_POST['gerar'])) {
+            // Captura o valor digitado no campo "vetor"
+            $valor = $_POST['vetor'] ?? '';
+            // Chama a função que adiciona o valor
+            adicionarValor($valor);
+
+        // 2️. Botão "Ordenar"
+        } elseif (isset($_POST['ordenar'])) {
+            ordenarVetor();
+
+        // 3️. Botão "Limpar"
+        } elseif (isset($_POST['limpar'])) {
+            limparVetor();
+
+        // 4️. Caso nenhum botão tenha sido clicado
+        } else {
+            mensagem("Nenhuma ação foi selecionada.");
+        }
+
+
+
+
+           //FUNÇÕES PRINCIPAIS
 
         // Função: Adiciona um valor ao vetor salvo na sessão
         function adicionarValor($valor)
@@ -155,31 +181,7 @@
             exit;
         }
 
-        /* =====================================================
-           LÓGICA PRINCIPAL DO PROGRAMA
-        ===================================================== */
-
-        // Verifica qual botão foi clicado no formulário HTML
-
-        // 1️⃣ Botão "Gerar" (adicionar valor)
-        if (isset($_POST['gerar'])) {
-            // Captura o valor digitado no campo "vetor"
-            $valor = $_POST['vetor'] ?? '';
-            // Chama a função que adiciona o valor
-            adicionarValor($valor);
-
-        // 2️⃣ Botão "Ordenar"
-        } elseif (isset($_POST['ordenar'])) {
-            ordenarVetor();
-
-        // 3️⃣ Botão "Limpar"
-        } elseif (isset($_POST['limpar'])) {
-            limparVetor();
-
-        // 4️⃣ Caso nenhum botão tenha sido clicado
-        } else {
-            mensagem("Nenhuma ação foi selecionada.");
-        }
+        
 
         ?>
     </div>
