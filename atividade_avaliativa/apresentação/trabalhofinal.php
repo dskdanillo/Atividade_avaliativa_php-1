@@ -979,20 +979,30 @@ echo '<br>';
 echo '<h3 id="func-explode">Função explode</h3>';
 echo '<p>Divide uma string em um array, usando um "delimitador". É o oposto de `implode`.</p>';
 
+// Define a string que será usada NO TEXTAREA
 $code = <<<EOT
-$string = "maçã,banana,laranja";
+\$testeString = "maçã,banana,laranja";
 // Separa a string em um array usando a vírgula ',' como delimitador
-print_r(explode(',', \$string));
+print_r(explode(',', \$testeString));
 EOT;
 echo '<label>Código:</label>';
 echo '<textarea readonly rows="3">' . htmlspecialchars($code) . '</textarea>';
 
 echo '<h4>Resultado:</h4>';
 echo '<div class="result"><pre>';
-$string = "maçã,banana,laranja";
-print_r(explode(',', $string));
+// *** GARANTA QUE ESTA LINHA ESTEJA AQUI ***
+// Define a string que será usada PELA FUNÇÃO EXPLODE ABAIXO
+$testeString = "maçã,banana,laranja"; 
+// *****************************************
+
+// Agora $testeString existe e pode ser usada pela função explode
+print_r(explode(',', $testeString)); // Linha 983 (aproximadamente)
+
 echo '</pre></div>';
 echo '<br>';
+
+// --- FIM DA SEÇÃO EXPLODE ---
+echo '<hr>'; // Linha separadora para a próxima função
 
 // --- array_push ---
 echo '<h3 id="func-array_push">Função array_push</h3>';
